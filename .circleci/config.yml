@@ -1,0 +1,45 @@
+version: 2
+jobs:
+  install:
+    docker:
+      - image: socifi/node:git
+    steps:
+      - checkout
+      - run: npm ci
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+  tests:
+      docker:
+        - image: socifi/node:git
+      steps:
+        - checkout
+        - attach_workspace:
+            at: .
+        - run: npm run lint
+  release:
+    docker:
+      - image: socifi/node:git
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: npm run release
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - install:
+          context: NPM
+      - tests:
+          context: NPM
+          requires:
+            - install
+      - release:
+          context: NPM
+          requires:
+            - tests
+          filters:
+            branches:
+              only: master

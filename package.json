@@ -1,0 +1,46 @@
+{
+  "name": "@socifi/babel-config",
+  "version": "0.1.0",
+  "description": "SOCIFI default babel config",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/socifi/babel-config"
+  },
+  "bugs": {
+    "url": "https://github.com/socifi/babel-config/issues"
+  },
+  "homepage": "https://github.com/socifi/babel-config",
+  "author": "Michal Ozogán <michal@socifi.com>",
+  "license": "Apache-2.0",
+  "keywords": [
+    "babel",
+    "babel-config",
+    "babelconfig"
+  ],
+  "browserslist": [
+    "> 1%",
+    "not ie <= 10",
+    "not ie_mob <= 10"
+  ],
+  "scripts": {
+    "lint": "eslint ./src/*.js",
+    "release": "semantic-release",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
+  },
+  "devDependencies": {
+    "@socifi/eslint-config": "^1.10.0",
+    "@socifi/commitlint-config": "^0.8.0",
+    "@socifi/semantic-release-config": "^0.8.1",
+    "husky": "^0.14.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-external-helpers": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0"
+  }
+}

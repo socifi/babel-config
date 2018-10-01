@@ -1,0 +1,5 @@
+.idea
+tests
+.circleci
+release.config.js
+commitlint.config.js
