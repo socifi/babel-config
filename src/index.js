@@ -10,6 +10,7 @@ const packageJson = require('./../package');
 module.exports = (targets = packageJson.browserslist.join(','), modules = 'commonjs') => {
     return {
         presets: [
+            '@babel/preset-typescript',
             [
                 '@babel/preset-env',
                 {
@@ -17,13 +18,16 @@ module.exports = (targets = packageJson.browserslist.join(','), modules = 'commo
                     targets,
                 },
             ],
-            '@babel/preset-typescript',
-            '@babel/preset-react',
         ],
         plugins: [
-            '@babel/external-helpers',
             '@babel/plugin-proposal-object-rest-spread',
             '@babel/plugin-proposal-class-properties',
+        ],
+        extensions: [
+            'js',
+            'jsx',
+            'ts',
+            'tsx',
         ],
     };
 };
