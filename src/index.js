@@ -1,4 +1,4 @@
-const packageJson = require('./../package');
+const packageJson = require('./../package.json');
 
 /**
  * Get basic configuration for babel.
@@ -10,6 +10,7 @@ const packageJson = require('./../package');
 module.exports = (targets = packageJson.browserslist.join(','), modules = 'commonjs') => {
     return {
         presets: [
+            '@babel/preset-react',
             '@babel/preset-typescript',
             [
                 '@babel/preset-env',
