@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/socifi/babel-config"
+    "url": "https://github.com/socifi/babel-config.git"
   },
   "bugs": {
     "url": "https://github.com/socifi/babel-config/issues"
