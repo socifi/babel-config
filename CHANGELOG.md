@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.4.0] 2018-10-25
+### Fixed
+- Package.json lock
+- Url for repository in package.json
+
+### Added
+- Babel preset for react
+
 ## [0.3.0] 2018-10-04
 ### Changed
 - [DAS-45](https://socifi.atlassian.net/browse/DAS-45) Add .eslintrc.js to npm ignore
