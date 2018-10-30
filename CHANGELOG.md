@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.5.0] 2018-10-30
+### Other
+- Merge remote-tracking branch 'origin/master'
+
+### Added
+- New plugins for optimalization.
+
 ## [0.4.0] 2018-10-25
 ### Fixed
 - Package.json lock
