@@ -1,13 +1,10 @@
-const packageJson = require('./../package.json');
-
 /**
  * Get basic configuration for babel.
-
- * @param {Object|string} targets - Target for babel @see https://babeljs.io/docs/en/babel-preset-env#targets
+ *
  * @param {false|string} modules - Compile modules, "amd" | "umd" | "systemjs" | "commonjs" | "cjs" | false
  * @returns {Object} Babel config
  */
-module.exports = (targets = packageJson.browserslist.join(','), modules = 'commonjs') => {
+module.exports = (modules = 'commonjs') => {
     return {
         presets: [
             '@babel/preset-react',
@@ -16,19 +13,37 @@ module.exports = (targets = packageJson.browserslist.join(','), modules = 'commo
                 '@babel/preset-env',
                 {
                     modules,
-                    targets,
+                    loose: true,
+                    useBuiltIns: 'usage',
                 },
             ],
         ],
         plugins: [
+            '@babel/plugin-transform-runtime',
             '@babel/plugin-proposal-object-rest-spread',
             '@babel/plugin-proposal-class-properties',
+            'babel-plugin-transform-react-class-to-function',
+            '@babel/plugin-syntax-dynamic-import',
         ],
-        extensions: [
-            'js',
-            'jsx',
-            'ts',
-            'tsx',
-        ],
+        env: {
+            development: {
+                plugins: [
+                    'react-hot-loader/babel',
+                    'babel-plugin-typescript-to-proptypes',
+                    'babel-plugin-runtyper',
+                ],
+            },
+            prod: {
+                presets: [
+                    [
+                        'minify',
+                        {
+                            evaluate: false,
+                            simplify: false,
+                        },
+                    ],
+                ],
+            },
+        },
     };
 };
