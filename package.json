@@ -1,6 +1,6 @@
 {
   "name": "@socifi/babel-config",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "SOCIFI default babel config",
   "main": "./src/index.js",
   "repository": {

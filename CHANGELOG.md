@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.5.1] 2018-10-31
+### Fixed
+- Add missing package.
+
 ## [0.5.0] 2018-10-30
 ### Other
 - Merge remote-tracking branch 'origin/master'
