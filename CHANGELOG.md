@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.5.2] 2018-11-06
+### Fixed
+- Eslint errors
+- Disable merge vars minify since it breaks the build.
+
 ## [0.5.1] 2018-10-31
 ### Fixed
 - Add missing package.
