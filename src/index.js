@@ -23,14 +23,24 @@ module.exports = (modules = 'commonjs') => {
             '@babel/plugin-proposal-object-rest-spread',
             '@babel/plugin-proposal-class-properties',
             'babel-plugin-transform-react-class-to-function',
-            '@babel/plugin-syntax-dynamic-import',
+            [
+                '@babel/plugin-proposal-decorators',
+                {
+                    decoratorsBeforeExport: true,
+                },
+            ],
         ],
         env: {
+            test: {
+                plugins: [
+                    'babel-plugin-transform-dynamic-import',
+                ],
+            },
             development: {
                 plugins: [
                     'react-hot-loader/babel',
                     'babel-plugin-typescript-to-proptypes',
-                    'babel-plugin-runtyper',
+                    '@babel/plugin-syntax-dynamic-import',
                 ],
             },
             production: {
@@ -62,6 +72,9 @@ module.exports = (modules = 'commonjs') => {
                             // removeDebugger: false,
                         },
                     ],
+                ],
+                plugins: [
+                    '@babel/plugin-syntax-dynamic-import',
                 ],
             },
         },
