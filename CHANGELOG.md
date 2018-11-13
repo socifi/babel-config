@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.0] 2018-11-13
+### Added
+- Support for decorators and test env
+
 ## [0.5.2] 2018-11-06
 ### Fixed
 - Eslint errors
