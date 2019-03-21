@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.1] 2019-03-21
+### Fixed
+- Core-js dependency
+
 ## [0.6.0] 2018-11-13
 ### Added
 - Support for decorators and test env
