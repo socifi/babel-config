@@ -15,6 +15,7 @@ module.exports = (modules = 'commonjs') => {
                     modules,
                     loose: true,
                     useBuiltIns: 'usage',
+                    corejs: 3,
                 },
             ],
         ],
