@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [0.6.2] 2019-08-27
+### Fixed
+- Adjust core js dependency
+
 ## [0.6.1] 2019-03-21
 ### Fixed
 - Core-js dependency
