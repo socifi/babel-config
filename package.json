@@ -23,26 +23,25 @@
     "release": "semantic-release"
   },
   "devDependencies": {
-    "@socifi/eslint-config": "^2.8.0",
-    "@socifi/commitlint-config": "^1.0.0",
-    "@socifi/semantic-release-config": "^1.0.1",
-    "husky": "^3.0.8"
+    "@socifi/eslint-config": "^2.10.0",
+    "@socifi/commitlint-config": "^1.1.0",
+    "@socifi/semantic-release-config": "^1.0.1"
   },
   "dependencies": {
-    "@babel/core": "^7.6.2",
+    "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-decorators": "^7.6.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
     "babel-plugin-transform-dynamic-import": "^2.1.0",
     "babel-plugin-transform-react-class-to-function": "^1.2.2",
     "babel-plugin-typescript-to-proptypes": "^0.17.1",
     "babel-preset-minify": "^0.5.1",
-    "core-js": "^3.2.1",
-    "react-hot-loader": "^4.12.14"
+    "core-js": "^3.3.2",
+    "react-hot-loader": "^4.12.15"
   }
 }
