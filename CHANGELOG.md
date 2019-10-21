@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 
 
+## [1.0.0] 2019-10-21
+### Changed
+- Export a single object instead of method BREAKING
+
 ## [0.7.0] 2019-10-07
 ### Changed
 - Update libraries
